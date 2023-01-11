@@ -153,10 +153,10 @@ function App() {
   
   
   return (
-    <div className="App bg-gradient-to-r from-green-200 to-pink-200 w-screen h-screen flex flex-col justify-around items-center">
+    <div className="App bg-gradient-to-r from-green-200 to-pink-200 w-screen h-screen flex flex-col justify-around items-center overflow-hidden">
       <BreakSess sessionLength={sessionLength} breakLength={breakLength} incrementSession={incrementSession} incrementBreak={incrementBreak} decrementSession={decrementSession} decrementBreak={decrementBreak} />
       <Timer playPause={playPause} sessBreakLabel={sessBreakLabel}  changePP={changePP} restartButton={restartButton} timeFormatter={timeFormatter} />
-      <h1 className="text-8xl text-center font-display">25 + 5 <br /> Clock</h1>
+      <h1 className="text-8xl text-center font-display m-10">25 + 5 <br /> Clock</h1>
       <audio id="beep" preload="auto" src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav" />
     </div>
   );
