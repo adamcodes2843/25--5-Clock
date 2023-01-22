@@ -9,7 +9,7 @@ const pauseButton = <FontAwesomeIcon icon={faPause} />;
 const BreakSess = ({sessionLength, breakLength, incrementSession, incrementBreak, decrementSession, decrementBreak}) => {
 
   return (
-  <div className="bsLengthBox flex flex-row text-4xl w-10/12 justify-between items-center text-center font-mono gap-10">
+  <div className="bsLengthBox flex flex-row sm:text-5xl text-4xl w-10/12 justify-between items-center text-center font-mono gap-10">
     <div className="sessionBox">
       <h2 id="session-label" className="">Session Length</h2>
       <div className="sessionControl mt-4">
@@ -41,7 +41,7 @@ const BreakSess = ({sessionLength, breakLength, incrementSession, incrementBreak
 const Timer = ({timeFormatter, playPause, sessBreakLabel, restartButton, changePP}) => {
   
   return (
-  <div className="timerBox flex flex-col text-6xl justify-between items-center font-mono text-7xl border-4 border-black rounded-xl py-10 w-96">
+  <div className="timerBox flex flex-col text-6xl justify-between items-center font-mono text-7xl md:border-4 border-4 border-black rounded-xl py-10 w-96">
     <h2 id="timer-label" className="border-b-4 border-black">{sessBreakLabel}</h2>
     <div id="time-left" className="mt-6" >{timeFormatter()}</div>
     <div className="buttonsBox text-4xl mt-4">
@@ -153,11 +153,13 @@ function App() {
   
   
   return (
-    <div className="App bg-gradient-to-r from-green-200 to-pink-200 w-screen h-screen flex flex-col justify-around items-center overflow-hidden">
+    <div className="App bg-gradient-to-r from-green-200 to-pink-200 w-screen h-screen flex flex-col justify-center items-center overflow-hidden">
+      <div className="container w-4/5 h-4/5 flex flex-col justify-around items-center">
       <BreakSess sessionLength={sessionLength} breakLength={breakLength} incrementSession={incrementSession} incrementBreak={incrementBreak} decrementSession={decrementSession} decrementBreak={decrementBreak} />
       <Timer playPause={playPause} sessBreakLabel={sessBreakLabel}  changePP={changePP} restartButton={restartButton} timeFormatter={timeFormatter} />
       <h1 className="text-8xl text-center font-display m-10">25 + 5 <br /> Clock</h1>
       <audio id="beep" preload="auto" src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav" />
+      </div>
     </div>
   );
 }
