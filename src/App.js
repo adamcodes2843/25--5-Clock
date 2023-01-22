@@ -153,7 +153,7 @@ function App() {
   
   
   return (
-    <div className="App bg-gradient-to-r from-green-200 to-pink-200 w-screen h-screen flex flex-col justify-center items-center overflow-hidden">
+    <div className="App bg-gradient-to-r from-green-200 to-pink-200 w-screen h-screen flex flex-col justify-center items-center overflow-hidden pt-8">
       <BreakSess sessionLength={sessionLength} breakLength={breakLength} incrementSession={incrementSession} incrementBreak={incrementBreak} decrementSession={decrementSession} decrementBreak={decrementBreak} />
       <Timer playPause={playPause} sessBreakLabel={sessBreakLabel}  changePP={changePP} restartButton={restartButton} timeFormatter={timeFormatter} />
       <h1 className="md:text-8xl text-6xl text-center font-display mt-12 md:font-medium font-semibold">25 + 5 <br /> Clock</h1>
