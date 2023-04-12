@@ -9,7 +9,7 @@ const pauseButton = <FontAwesomeIcon icon={faPause} />;
 const BreakSess = ({sessionLength, breakLength, incrementSession, incrementBreak, decrementSession, decrementBreak}) => {
 
   return (
-  <div className="bsLengthBox flex flex-row 2xl:text-5xl text-4xl md:w-6/8 2xl:w-1/2 w-10/12 justify-between items-center text-center font-mono">
+  <div className="bsLengthBox flex flex-row 2xl:text-5xl text-4xl md:w-6/8 2xl:w-7/12 w-10/12 justify-between items-center text-center font-mono mr-4">
     <div className="sessionBox">
       <h2 id="session-label" className="">Session Length</h2>
       <div className="sessionControl 2xl:mt-4 mt-2">
@@ -22,7 +22,7 @@ const BreakSess = ({sessionLength, breakLength, incrementSession, incrementBreak
         </button>
       </div>
     </div>
-    <div className="breakBox">
+    <div className="breakBox ml-4">
       <h2 id="break-label" className="">Break Length</h2>
       <div className="breakControl 2xl:mt-4 mt-2">
         <button id="break-increment" onClick={incrementBreak}>
@@ -41,7 +41,7 @@ const BreakSess = ({sessionLength, breakLength, incrementSession, incrementBreak
 const Timer = ({timeFormatter, playPause, sessBreakLabel, restartButton, changePP}) => {
   
   return (
-  <div className="timerBox flex flex-col justify-between items-center font-mono 2xl:text-7xl lg:text-6xl text-5xl md:border-4 border-black rounded-xl 2xl:py-10 py-3 w-96">
+  <div className="timerBox flex flex-col justify-between items-center font-mono lg:text-6xl text-5xl md:border-4 border-black rounded-xl 3xl:py-10 py-3 w-96">
     <h2 id="timer-label" className="border-b-4 border-black">{sessBreakLabel}</h2>
     <div id="time-left" className="mt-6" >{timeFormatter()}</div>
     <div className="buttonsBox md:text-4xl text-3xl md:mt-4">
